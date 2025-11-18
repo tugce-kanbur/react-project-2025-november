@@ -226,6 +226,8 @@ const CalendarContainer = ({ schedule, auth }: CalendarContainerProps) => {
       
       const invalidClass = !isValidDate ? "invalid-date" : "";
       
+      const color = getStaffColorForPair(assignment.staffId);
+
       const work: EventInput = {
         id: assignment.id,
         title: getShiftById(assignment.shiftId)?.name,
@@ -234,6 +236,8 @@ const CalendarContainer = ({ schedule, auth }: CalendarContainerProps) => {
         staffId: assignment.staffId,
         shiftId: assignment.shiftId,
         className: `event ${staffClass} ${shiftClass} ${updatedClass} ${invalidClass}`,
+        backgroundColor: color,
+        borderColor: color,
       };
       works.push(work);
     }
@@ -278,7 +282,7 @@ const CalendarContainer = ({ schedule, auth }: CalendarContainerProps) => {
                 setSelectedStaffId(staff.id);
                 setSelectedEvent(null);
               }}
-              className={`staff ${
+              className={`staff ${getStaffBgClass(staff.id)} ${
                 staff.id === selectedStaffId ? "active" : ""
               }`}
             >
