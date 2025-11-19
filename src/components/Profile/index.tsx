@@ -1,9 +1,6 @@
 import type { UserInstance } from "../../models/user";
 import AuthSession from "../../utils/session";
 import "../profileCalendar.scss";
-/* <p>{profile?.role ??
-         AuthSession.getRoles()}</p>  değiştirdin <p>{profile?.role?.name || 
-         AuthSession.getRoles() || "-"}</p> yaptın   */
 type ProfileCardProps = {
     profile: UserInstance;
 };

@@ -191,19 +191,6 @@ const CalendarContainer = ({ schedule, auth }: CalendarContainerProps) => {
     setPairHighlights(map);
   };
 
-  const getDatesBetween = (startDate: string, endDate: string) => {
-    const dates = [];
-    const start = dayjs(startDate, "DD.MM.YYYY").toDate();
-    const end = dayjs(endDate, "DD.MM.YYYY").toDate();
-    const current = new Date(start);
-
-    while (current <= end) {
-      dates.push(dayjs(current).format("DD-MM-YYYY"));
-      current.setDate(current.getDate() + 1);
-    }
-
-    return dates;
-  };
 
   const generateStaffBasedCalendar = () => {
     if(!selectedStaffId) return;

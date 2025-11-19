@@ -485,7 +485,7 @@ export const scheduleReponse = {
         id: "92461525-7355-4161-9703-7401c22763c3",
         staffId: "6a003ce0-f3e4-43e4-9f3d-f8850297ffa8",
         shiftId: "1d8bd052-3750-4d5d-bdaa-70055737a25r",
-        shiftStart: "2025-10-11T17:30:00.000Z",    /* T017 YAZIYODU T17:30 YAPTIM */
+        shiftStart: "2025-10-11T17:30:00.000Z",
         shiftEnd: "2025-10-11T21:00:00.000Z",
         isUpdated: false,
       },

@@ -27,7 +27,6 @@ function* asyncLogin({
     AuthSession.setPhoneNumber(response.data!.phoneNumber);
     AuthSession.setOrganizationId(response.data!.organizationId);
     AuthSession.setDepartmentId(response.data!.currentDepartmentId);
-    /* AuthSession.setRoles(`${response.data!.role}`);  değiştirdin AuthSession.setRoles(response.data!.role.name); yaptın   */
     AuthSession.setRoles(response.data!.role.name);
     AuthSession.setLanguage(response.data.language);
 

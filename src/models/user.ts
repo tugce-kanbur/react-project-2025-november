@@ -4,7 +4,7 @@ interface Department {
   name: string;
   role: number;
 }
-/* Role interface ekledin ve role önceden any */
+
 interface Role {
   id: number;
   name: string;
